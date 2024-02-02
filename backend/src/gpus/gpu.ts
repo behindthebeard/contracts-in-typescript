@@ -1,5 +1,5 @@
 export interface Gpu {
-  id: number;
+  id: string;
   brand: string;
   model: string;
   status: 'inStock' | 'outOfStock' | 'comingSoon';
