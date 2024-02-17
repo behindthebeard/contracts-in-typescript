@@ -1,11 +1,11 @@
 'use client';
 
+import { CaretSortIcon } from '@radix-ui/react-icons';
 import { ColumnDef } from '@tanstack/react-table';
 import { Gpu } from '../types';
 import { assertNever } from '../utils';
-import { Button } from './ui/button';
-import { EyeOpenIcon, CaretSortIcon } from '@radix-ui/react-icons';
 import { GpuDialog } from './gpu-dialog';
+import { Button } from './ui/button';
 
 export const gpuTableColumns: ColumnDef<Gpu>[] = [
   {

@@ -33,4 +33,4 @@ const useGpuById = (id?: Gpu['id']) => {
   });
 };
 
-export { useGpus, fetchGpus, useGpuById, fetchGpuById };
+export { fetchGpuById, fetchGpus, useGpuById, useGpus };

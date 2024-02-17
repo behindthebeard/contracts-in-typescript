@@ -3,17 +3,16 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { EyeOpenIcon } from '@radix-ui/react-icons';
-import { Gpu } from '../types';
-import { useGpuById } from '../hooks/gpus';
-import { Separator } from './ui/separator';
 import Image from 'next/image';
+import { useGpuById } from '../hooks/gpus';
+import { Gpu } from '../types';
+import { Separator } from './ui/separator';
 
 type Props = {
   id?: Gpu['id'];

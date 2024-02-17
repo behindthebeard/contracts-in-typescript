@@ -4,6 +4,7 @@
   "printWidth": 80,
   "parser": "babel-ts",
   "importOrder": [
+    "react", "^(?!react)\\w+$", "^[./]",
     "<THIRD_PARTY_MODULES>",
     "interface",
     "(?=content|api)",
@@ -20,5 +21,5 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderParserPlugins": ["typescript", "decorators-legacy"],
-  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+  "plugins": ["prettier-plugin-organize-imports"]
 }

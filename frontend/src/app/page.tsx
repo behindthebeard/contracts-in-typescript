@@ -1,13 +1,12 @@
 'use client';
 
-import Image from 'next/image';
-import { ThemeModeToggle } from '../components/theme-mode-toggle';
-import { Separator } from '../components/ui/separator';
+import React from 'react';
 import { GpuDataTable } from '../components/gpu-table';
 import { gpuTableColumns } from '../components/gpu-table-columns';
-import { useGpus } from '../hooks/gpus';
-import React from 'react';
+import { ThemeModeToggle } from '../components/theme-mode-toggle';
 import { Progress } from '../components/ui/progress';
+import { Separator } from '../components/ui/separator';
+import { useGpus } from '../hooks/gpus';
 
 export default function Home() {
   const [progress, setProgress] = React.useState(10);
