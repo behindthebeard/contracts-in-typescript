@@ -4,17 +4,37 @@ import { ColumnDef } from '@tanstack/react-table';
 import { Gpu } from '../types';
 import { assertNever } from '../utils';
 import { Button } from './ui/button';
-import { EyeOpenIcon } from '@radix-ui/react-icons';
+import { EyeOpenIcon, CaretSortIcon } from '@radix-ui/react-icons';
 import { GpuDialog } from './gpu-dialog';
 
 export const gpuTableColumns: ColumnDef<Gpu>[] = [
   {
     accessorKey: 'brand',
-    header: 'Brand',
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Brand
+          <CaretSortIcon />
+        </Button>
+      );
+    },
   },
   {
     accessorKey: 'model',
-    header: 'Model',
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Model
+          <CaretSortIcon />
+        </Button>
+      );
+    },
   },
   {
     accessorKey: 'status',
@@ -37,7 +57,19 @@ export const gpuTableColumns: ColumnDef<Gpu>[] = [
   },
   {
     accessorKey: 'price',
-    header: () => <div className="text-right">Price</div>,
+    header: ({ column }) => {
+      return (
+        <div className="text-right">
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          >
+            Price
+            <CaretSortIcon />
+          </Button>
+        </div>
+      );
+    },
     cell: ({ row }) => {
       const price = row.original.price;
       const formatted = new Intl.NumberFormat('en-US', {
