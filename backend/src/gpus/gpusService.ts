@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Gpu } from './gpu';
+
 import { gpusFixture } from './fixture';
+import { Gpu } from './gpu';
 
 export type GpuCreationParams = Omit<Gpu, 'id'>;
 

@@ -9,7 +9,7 @@ import {
 } from 'tsoa';
 
 import { Gpu } from './gpu';
-import { GpusService, GpuCreationParams } from './gpusService';
+import { GpuCreationParams, GpusService } from './gpusService';
 
 @Route('gpus')
 export class GpusController extends Controller {

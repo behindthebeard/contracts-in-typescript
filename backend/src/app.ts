@@ -1,12 +1,13 @@
+import cors from 'cors';
 import express, {
+  Request as ExRequest,
+  Response as ExResponse,
   json,
   urlencoded,
-  Response as ExResponse,
-  Request as ExRequest,
 } from 'express';
 import swaggerUi from 'swagger-ui-express';
+
 import { RegisterRoutes } from '../build/routes';
-import cors from 'cors';
 
 export const app = express();
 
