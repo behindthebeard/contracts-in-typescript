@@ -6,9 +6,19 @@ import { Separator } from "../components/ui/separator";
 import { DataTable } from "../components/table";
 import { tableColumns } from "../components/table-columns";
 import { useGpus } from "../hooks/gpus";
+import React from "react";
+import { Progress } from "../components/ui/progress";
 
 export default function Home() {
-  const { data } = useGpus();
+  const [progress, setProgress] = React.useState(10);
+
+  React.useEffect(() => {
+    if (progress >= 90) return;
+    const timer = setTimeout(() => setProgress(progress + 10), 200);
+    return () => clearTimeout(timer);
+  }, [progress]);
+
+  const { data, isLoading } = useGpus();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -20,7 +30,13 @@ export default function Home() {
           <ThemeModeToggle />
         </div>
         <Separator />
-        <DataTable columns={tableColumns} data={data ?? []} />
+        {isLoading ? (
+          <div className="w-full md:w-auto">
+            <Progress value={progress} />
+          </div>
+        ) : (
+          <DataTable columns={tableColumns} data={data ?? []} />
+        )}
       </div>
     </main>
   );
