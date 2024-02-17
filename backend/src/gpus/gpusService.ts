@@ -5,6 +5,10 @@ import { gpusFixture } from './fixture';
 export type GpuCreationParams = Omit<Gpu, 'id'>;
 
 export class GpusService {
+  public getAll(): Gpu[] {
+    return gpusFixture;
+  }
+
   public get(id: Gpu['id']): Gpu | undefined {
     return gpusFixture.find((gpu) => gpu.id === id);
   }
