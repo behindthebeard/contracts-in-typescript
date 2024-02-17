@@ -5,4 +5,5 @@ export interface Gpu {
   status: 'inStock' | 'outOfStock' | 'comingSoon';
   price: number;
   imageUrl?: string;
+  description: string;
 }

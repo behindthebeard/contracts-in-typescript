@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { ThemeModeToggle } from "../components/theme-mode-toggle";
 import { Separator } from "../components/ui/separator";
-import { DataTable } from "../components/table";
-import { tableColumns } from "../components/table-columns";
+import { GpuDataTable } from "../components/gpu-table";
+import { gpuTableColumns } from "../components/gpu-table-columns";
 import { useGpus } from "../hooks/gpus";
 import React from "react";
 import { Progress } from "../components/ui/progress";
@@ -18,7 +18,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [progress]);
 
-  const { data, isLoading } = useGpus();
+  const { data: gpus, isLoading } = useGpus();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -35,7 +35,7 @@ export default function Home() {
             <Progress value={progress} />
           </div>
         ) : (
-          <DataTable columns={tableColumns} data={data ?? []} />
+          <GpuDataTable columns={gpuTableColumns} data={gpus ?? []} />
         )}
       </div>
     </main>
