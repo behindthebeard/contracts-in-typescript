@@ -2,7 +2,7 @@
 
 import { CaretSortIcon } from '@radix-ui/react-icons';
 import { ColumnDef } from '@tanstack/react-table';
-import { Gpu } from '../types';
+import { Gpu } from '../api';
 import { assertNever } from '../utils';
 import { GpuDialog } from './gpu-dialog';
 import { Button } from './ui/button';

@@ -14,18 +14,18 @@ import { GpuCreationParams, GpusService } from './gpusService';
 @Route('gpus')
 export class GpusController extends Controller {
   @Get()
-  public async getUsers(): Promise<Array<Gpu>> {
+  public async getGpus(): Promise<Array<Gpu>> {
     return new GpusService().getAll();
   }
 
   @Get('{id}')
-  public async getUser(@Path() id: Gpu['id']): Promise<Gpu | void> {
+  public async getGpu(@Path() id: Gpu['id']): Promise<Gpu | void> {
     return new GpusService().get(id);
   }
 
   @SuccessResponse('201', 'Created')
   @Post()
-  public async createUser(
+  public async createGpu(
     @Body() requestBody: GpuCreationParams,
   ): Promise<void> {
     this.setStatus(201);

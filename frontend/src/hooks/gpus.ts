@@ -3,8 +3,8 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
+import { Gpu } from '../api';
 import { apiURL } from '../constants';
-import { Gpu } from '../types';
 
 const fetchGpus = async () => {
   const response = await axios.get<Array<Gpu>>(`${apiURL}/gpus`);
