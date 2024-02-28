@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { EyeOpenIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
-import { Gpu } from '../api';
+import { Gpu } from '../backend-api';
 import { useGpuById } from '../hooks/gpus';
 import { Separator } from './ui/separator';
 

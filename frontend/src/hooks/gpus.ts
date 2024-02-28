@@ -1,13 +1,12 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 
-import { Gpu } from '../api';
-import { apiURL } from '../constants';
+import { Gpu } from '../backend-api';
+import { getBackendApi } from '../lib/api';
 
 const fetchGpus = async () => {
-  const response = await axios.get<Array<Gpu>>(`${apiURL}/gpus`);
+  const response = await getBackendApi().gpus.getGpus();
 
   return response.data;
 };
@@ -20,7 +19,7 @@ const useGpus = () => {
 };
 
 const fetchGpuById = async (id: Gpu['id']) => {
-  const response = await axios.get<Gpu>(`${apiURL}/gpus/${id}`);
+  const response = await getBackendApi().gpus.getGpu(id);
 
   return response.data;
 };
