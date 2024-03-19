@@ -1,3 +1,5 @@
+Inspiration from [Chris Kalmar's video](https://www.youtube.com/watch?v=AVT0FUKcvvk&ab_channel=ChrisKalmar).
+
 ## Stack
 
 - Tsoa
