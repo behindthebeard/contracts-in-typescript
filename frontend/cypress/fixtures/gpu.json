@@ -1,0 +1,9 @@
+{
+  "id": "1",
+  "brand": "Nvidia",
+  "model": "RTX 3080",
+  "status": "inStock",
+  "price": 699,
+  "imageUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/images/design/geforce-rtx-3080-4-960.jpg",
+  "description": "The GeForce RTX™ 3080 delivers the ultra performance that gamers crave, powered by Ampere—NVIDIA’s 2nd gen RTX architecture. It’s built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and superfast G6X memory for an amazing gaming experience."
+}

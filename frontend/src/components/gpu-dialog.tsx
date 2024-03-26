@@ -1,3 +1,5 @@
+'use-client';
+
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -44,7 +46,7 @@ export function GpuDialog({ id }: Props) {
     return (
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="view gpu">
             <EyeOpenIcon />
           </Button>
         </DialogTrigger>
