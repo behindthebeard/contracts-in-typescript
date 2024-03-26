@@ -5,7 +5,7 @@ Inspiration from [Chris Kalmar's video](https://www.youtube.com/watch?v=AVT0FUKc
 
 ## Stack
 
-This repository utilizes a stack of technologies including, to make sure FE-BE API is typesafe with automatic contract generation:
+This repository utilizes a stack of technologies below, to make sure FE-BE API is typesafe with automatic contract generation:
 
 - Tsoa: a typesafe framework for generating contracts
 - Next.js: a React framework for building frontend applications
