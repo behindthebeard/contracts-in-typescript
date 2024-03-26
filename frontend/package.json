@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
   "scripts": {
     "generate-types": "swagger-typescript-api -p ../backend/build/swagger.json  -o src/ -n backend-api.ts -r --axios --union-enums --route-types --sort-types --sort-routes",
     "dev": "pnpm run generate-types && next dev",

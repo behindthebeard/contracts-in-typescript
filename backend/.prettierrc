@@ -4,7 +4,9 @@
   "printWidth": 80,
   "parser": "typescript",
   "importOrder": [
-    "react", "^(?!react)\\w+$", "^[./]",
+    "react",
+    "^(?!react)\\w+$",
+    "^[./]",
     "<THIRD_PARTY_MODULES>",
     "interface",
     "(?=content|api)",
@@ -21,5 +23,13 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "importOrderParserPlugins": ["typescript", "decorators-legacy"],
-  "plugins": ["prettier-plugin-organize-imports"]
+  "plugins": ["prettier-plugin-organize-imports"],
+  "overrides": [
+    {
+      "files": ["*.json", "*.jsonc", "*.json5", ".prettierrc"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }
