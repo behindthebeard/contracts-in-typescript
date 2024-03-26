@@ -7,11 +7,11 @@ Inspiration from [Chris Kalmar's video](https://www.youtube.com/watch?v=AVT0FUKc
 
 This repository utilizes a stack of technologies below, to make sure FE-BE API is typesafe with automatic contract generation:
 
-- Tsoa: a typesafe framework for generating contracts
-- Next.js: a React framework for building frontend applications
-- Tanstack Query: a powerful data-fetching library
-- Tailwind: a utility-first CSS framework
-- shadcn/ui: a UI component library
+- [Tsoa](https://github.com/lukeautry/tsoa): a typesafe framework for generating contracts
+- [Next.js](https://nextjs.org/): a React framework for building frontend applications
+- [Tanstack Query](https://github.com/tannerlinsley/react-query): a powerful data-fetching library
+- [Tailwind](https://tailwindcss.com/): a utility-first CSS framework
+- [shadcn/ui](https://github.com/shadcn/ui): a UI component library
 
 ## Architecture
 
