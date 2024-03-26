@@ -1,5 +1,5 @@
 {
   "depcheck": {
-    "ignoreMatches": ["prettier", "prettier-plugin-organize-imports"]
+    "ignoreMatches": ["prettier", "prettier-plugin-organize-imports", "ts-node"]
   }
 }
