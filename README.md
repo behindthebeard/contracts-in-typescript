@@ -23,13 +23,19 @@ This project consists of a backend utilizing Tsoa and a frontend built with Next
 
 ```bash
 cd backend
-npm install
+pnpm install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+pnpm run dev
+```
+
+### Unit tests
+
+```bash
+pnpm run test
 ```
 
 ## Frontend
@@ -38,11 +44,17 @@ npm run dev
 
 ```bash
 cd frontend
-npm install
+pnpm install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+pnpm run dev
+```
+
+### Integration tests
+
+```bash
+pnpm run cy:run
 ```
