@@ -1,0 +1,1 @@
+{"depcheck": {"ignoreMatches": ["prettier", "prettier-plugin-organize-imports", "autoprefixer", "@types/node"]}}
